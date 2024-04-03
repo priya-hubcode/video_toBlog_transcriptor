@@ -3,11 +3,7 @@ Introduction to Tokenization in Large Language Models
 
 Welcome to our exploration of tokenization in large language models (LLMs). Tokenization is a crucial, albeit complex, process that plays a foundational role in how LLMs understand and process text data. Despite its challenges, mastering tokenization is essential for anyone working with LLMs.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_8.jpg" alt=" Now you see here that I have a sad face and that's because tokenization is my least favorite part" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_8.jpg" alt=" Now you see here that I have a sad face and that's because tokenization is my least favorite part" width="450"/>
->>>>>>> master
+<img src="frames/frame_8.jpg" alt=" Now you see here that I have a sad face and that's because tokenization is my least favorite part" width="450"/>
 
 ### What is Tokenization?
 
@@ -19,11 +15,7 @@ Tokenization is the process of converting strings of text into sequences of toke
 
 After tokenization, embedding tables come into play. These tables use the integer associated with each token as a lookup to extract a row of trainable parameters. These parameters, once trained, are what the transformer model uses to "understand" each token.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_140.jpg" alt=" So here we had a very naive tokenization process that was a character level tokenizer" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_140.jpg" alt=" So here we had a very naive tokenization process that was a character level tokenizer" width="450"/>
->>>>>>> master
+<img src="frames/frame_140.jpg" alt=" So here we had a very naive tokenization process that was a character level tokenizer" width="450"/>
 
 ### Beyond Character-Level Tokenization
 
@@ -43,11 +35,7 @@ Tokenization is not just a technical detail; it significantly impacts the perfor
 
 To better understand tokenization's effects, we explore live examples using a web app that allows for real-time tokenization in your browser. This demonstration highlights how tokenization can vary significantly based on the context, language, and even formatting of the text.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_361.jpg" alt=" So I have it loaded here and what I like about this web app is that tokenization is running a sort of live in your browser in JavaScript" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_361.jpg" alt=" So I have it loaded here and what I like about this web app is that tokenization is running a sort of live in your browser in JavaScript" width="450"/>
->>>>>>> master
+<img src="frames/frame_361.jpg" alt=" So I have it loaded here and what I like about this web app is that tokenization is running a sort of live in your browser in JavaScript" width="450"/>
 
 ### Tokenization and Non-English Languages
 
@@ -84,11 +72,7 @@ However, the expansion of the token vocabulary is not without its challenges. As
 
 A noteworthy improvement in the GPT-4 tokenizer is its handling of white spaces in Python code. By grouping multiple spaces into a single token, the tokenizer significantly enhances the efficiency of representing Python code. This design choice by OpenAI not only densifies the input but also improves the model's performance in code prediction tasks.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_6014.jpg" alt=" You see that here these four spaces are represented as one single token for the three spaces here and then the token spaces and here seven spaces were all grouped into a single token" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_6014.jpg" alt=" You see that here these four spaces are represented as one single token for the three spaces here and then the token spaces and here seven spaces were all grouped into a single token" width="450"/>
->>>>>>> master
+<img src="frames/frame_6014.jpg" alt=" You see that here these four spaces are represented as one single token for the three spaces here and then the token spaces and here seven spaces were all grouped into a single token" width="450"/>
 
 This strategic grouping of white spaces into fewer tokens exemplifies the thoughtful design considerations that contribute to the overall improvement in LLMs from GPT-2 to GPT-4, beyond mere architectural and optimization tweaks.
 
@@ -101,11 +85,7 @@ The evolution of tokenizers from GPT-2 to GPT-4 highlights a significant stride 
 
 Tokenization is the process of converting strings of text into integers within a fixed vocabulary, which are then used to make lookups into a table of vectors. These vectors are fed into the transformer as input. This process becomes complex when we consider supporting multiple languages and special characters, such as emojis.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_7690.jpg" alt=" So remember what we want to do. We want to take strings and feed them into language models" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_7690.jpg" alt=" So remember what we want to do. We want to take strings and feed them into language models" width="450"/>
->>>>>>> master
+<img src="frames/frame_7690.jpg" alt=" So remember what we want to do. We want to take strings and feed them into language models" width="450"/>
 
 ### The Challenge of Supporting Multiple Languages and Characters
 
@@ -117,11 +97,7 @@ The complexity of tokenization arises from the need to support a wide range of c
 
 Unicode code points are a way to represent characters from various languages and scripts. Python's `ORD` function can be used to find the code point of a character. However, the direct use of Unicode code points is inefficient due to the large vocabulary size. Instead, encodings like UTF-8, UTF-16, and UTF-32 are used to translate Unicode text into binary data or byte streams, with UTF-8 being the most common due to its variable length encoding and compatibility with ASCII.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_1082.jpg" alt=" So Unicode code points are defined by the Unicode consortium as part of the Unicode standard" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_1082.jpg" alt=" So Unicode code points are defined by the Unicode consortium as part of the Unicode standard" width="450"/>
->>>>>>> master
+<img src="frames/frame_1082.jpg" alt=" So Unicode code points are defined by the Unicode consortium as part of the Unicode standard" width="450"/>
 
 ### The Role of UTF-8 Encoding
 
@@ -133,11 +109,7 @@ UTF-8 encoding translates Unicode code points into a byte stream, which can rang
 
 To address the limitations of using raw UTF-8 byte streams, the Byte Pair Encoding (BPE) algorithm is employed. BPE compresses byte sequences by iteratively finding and replacing the most frequent pairs of bytes with a new token, thereby reducing the sequence length while expanding the vocabulary in a controlled manner. This method allows for efficient encoding of text into tokens that can be used by language models.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_1433.jpg" alt=" So as I mentioned the byte pair encoding algorithm is not all that complicated" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_1433.jpg" alt=" So as I mentioned the byte pair encoding algorithm is not all that complicated" width="450"/>
->>>>>>> master
+<img src="frames/frame_1433.jpg" alt=" So as I mentioned the byte pair encoding algorithm is not all that complicated" width="450"/>
 
 ### Implementing Byte Pair Encoding
 
@@ -149,11 +121,7 @@ The implementation of BPE involves encoding text into UTF-8, converting bytes to
 
 A practical example of applying BPE is demonstrated by encoding a paragraph into UTF-8, identifying the most common byte pairs, and iteratively merging them to compress the sequence. This process is repeated until a desired vocabulary size or sequence length is achieved, showcasing the effectiveness of BPE in preparing text for language models.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_1626.jpg" alt=" So here's what i did i went to this blog post that i enjoyed and i took the first paragraph" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_1626.jpg" alt=" So here's what i did i went to this blog post that i enjoyed and i took the first paragraph" width="450"/>
->>>>>>> master
+<img src="frames/frame_1626.jpg" alt=" So here's what i did i went to this blog post that i enjoyed and i took the first paragraph" width="450"/>
 
 ### Conclusion
 
@@ -166,11 +134,7 @@ Optimizing Vocabulary Size for Efficiency
 
 Finding the ideal vocabulary size is crucial for the efficiency of tokenization in large language models. A larger vocabulary can reduce the sequence length but requires careful tuning to find the optimal balance. GPT-4, for example, utilizes a vocabulary of approximately 100,000 tokens, demonstrating the scale at which modern models operate.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_2073.jpg" alt=" The more steps we take, the larger will be our vocabulary, and the shorter will be our sequence" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_2073.jpg" alt=" The more steps we take, the larger will be our vocabulary, and the shorter will be our sequence" width="450"/>
->>>>>>> master
+<img src="frames/frame_2073.jpg" alt=" The more steps we take, the larger will be our vocabulary, and the shorter will be our sequence" width="450"/>
 
 Advanced Tokenization Techniques
 --------------------------------
@@ -185,11 +149,7 @@ To refine our tokenizer, we employ an iterative process known as Byte-Pair Encod
 
 Determining the final vocabulary size is a critical step in the tokenization process, acting as a hyperparameter that influences the tokenizer's performance. For our example, we aim for a vocabulary size of 276 tokens, achieved through 20 specific merges, starting from an initial set of 256 byte tokens.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_2170.jpg" alt=" So let's say for us, we're going to use 276 because that way we're going to be doing exactly 20 merges" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_2170.jpg" alt=" So let's say for us, we're going to use 276 because that way we're going to be doing exactly 20 merges" width="450"/>
->>>>>>> master
+<img src="frames/frame_2170.jpg" alt=" So let's say for us, we're going to use 276 because that way we're going to be doing exactly 20 merges" width="450"/>
 
 ### The Process of Merging Tokens
 
@@ -202,11 +162,7 @@ Evaluating Compression Efficiency
 
 After completing the specified number of merges, it's essential to assess the tokenizer's efficiency by examining the compression ratio achieved. This ratio indicates how effectively the tokenizer can reduce the size of the original text, with a higher ratio signifying greater efficiency. In our example, a compression ratio of approximately 1.27 was achieved after 20 merges.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_2344.jpg" alt=" One thing we can take a look at as well is we can take a look at the compression ratio that we've achieved" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_2344.jpg" alt=" One thing we can take a look at as well is we can take a look at the compression ratio that we've achieved" width="450"/>
->>>>>>> master
+<img src="frames/frame_2344.jpg" alt=" One thing we can take a look at as well is we can take a look at the compression ratio that we've achieved" width="450"/>
 
 Training the Tokenizer: A Separate Preprocessing Stage
 ------------------------------------------------------
@@ -221,11 +177,7 @@ The tokenizer serves as a distinct preprocessing stage, separate from the traini
 
 For optimal performance, the tokenizer may require a different training set than the large language model, encompassing a variety of languages and data types. This diversity ensures that the tokenizer can effectively handle different kinds of text, resulting in more efficient tokenization and, consequently, better model performance.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_6867.jpg" alt=" So for example, when you're training the tokenizer, as I mentioned, we don't just care about the performance of English text" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_6867.jpg" alt=" So for example, when you're training the tokenizer, as I mentioned, we don't just care about the performance of English text" width="450"/>
->>>>>>> master
+<img src="frames/frame_6867.jpg" alt=" So for example, when you're training the tokenizer, as I mentioned, we don't just care about the performance of English text" width="450"/>
 
 Encoding and Decoding with the Trained Tokenizer
 -------------------------------------------------
@@ -241,11 +193,7 @@ Decoding is the process of converting a sequence of tokens back into the origina
 
 Creating a custom vocabulary is a pivotal step in the tokenization process for large language models. This involves mapping token IDs to their corresponding byte objects, starting with the raw bytes for tokens from 0 to 255 and then incorporating all merges in a sorted manner. This method ensures a comprehensive bytes representation of tokens, crucial for effective tokenization.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_2931.jpg" alt=" So there are many different ways to do it.Here's one way" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_2931.jpg" alt=" So there are many different ways to do it.Here's one way" width="450"/>
->>>>>>> master
+<img src="frames/frame_2931.jpg" alt=" So there are many different ways to do it.Here's one way" width="450"/>
 
 ### The Importance of Python Version in Tokenization
 
@@ -258,11 +206,7 @@ It's essential to note the significance of using modern Python versions, specifi
 
 The process of converting token IDs back into readable text involves looking up their byte representations in the vocabulary, concatenating these bytes, and then decoding them back into Python strings using UTF-8. This step is crucial for transforming the raw bytes into a format that can be easily understood and utilized.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_2690.jpg" alt=" And then here, this is one way in Python to concatenate all these bytes together to create our tokens" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_2690.jpg" alt=" And then here, this is one way in Python to concatenate all these bytes together to create our tokens" width="450"/>
->>>>>>> master
+<img src="frames/frame_2690.jpg" alt=" And then here, this is one way in Python to concatenate all these bytes together to create our tokens" width="450"/>
 
 ### Addressing UTF-8 Decoding Errors
 
@@ -275,11 +219,7 @@ A common challenge in tokenization is handling invalid UTF-8 byte sequences, whi
 
 The final step in the tokenization process is encoding strings back into token IDs. This involves creating a function that takes a string as input and outputs a list of integers representing the token IDs. This function is essential for converting text data into a format that can be processed by large language models.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_2565.jpg" alt=" So we are going to implement this error right here, where we are going to be given a string, and we want to encode it into tokens" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_2565.jpg" alt=" So we are going to implement this error right here, where we are going to be given a string, and we want to encode it into tokens" width="450"/>
->>>>>>> master
+<img src="frames/frame_2565.jpg" alt=" So we are going to implement this error right here, where we are going to be given a string, and we want to encode it into tokens" width="450"/>
 
 Advanced Tokenization Techniques
 --------------------------------
@@ -290,11 +230,7 @@ In this section, we delve into a more sophisticated approach to tokenization, mo
 
 The initial step in this advanced tokenization process involves encoding the text into UTF-8, converting it into a series of raw bytes. This method provides a foundation by transforming the text into a more manageable form for further processing.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_2123.jpg" alt=" So this is one of the ways that I came up with. So the first thing we're going to do is we are going to take our text, encode it into UTF-8 to get the raw bytes." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_2123.jpg" alt=" So this is one of the ways that I came up with. So the first thing we're going to do is we are going to take our text, encode it into UTF-8 to get the raw bytes." width="450"/>
->>>>>>> master
+<img src="frames/frame_2123.jpg" alt=" So this is one of the ways that I came up with. So the first thing we're going to do is we are going to take our text, encode it into UTF-8 to get the raw bytes." width="450"/>
 
 ### Utilizing a Merges Dictionary
 
@@ -341,11 +277,7 @@ In the journey of tokenization, a critical step involves identifying and merging
 
 The algorithm seeks pairs that can be merged, but it encounters a significant hurdle when no pairs meet the merging criteria. This situation is indicated by all pairs evaluating to `float infs` for the merging criterion, leading to a scenario where the algorithm cannot proceed with any merges.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_3197.jpg" alt=" If there's nothing to merge, then there's nothing in merges that is satisfied anymore" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_3197.jpg" alt=" If there's nothing to merge, then there's nothing in merges that is satisfied anymore" width="450"/>
->>>>>>> master
+<img src="frames/frame_3197.jpg" alt=" If there's nothing to merge, then there's nothing in merges that is satisfied anymore" width="450"/>
 
 ### Breaking Out When No Merges Are Possible
 
@@ -357,11 +289,7 @@ A crucial part of the process is identifying when no further merges can be made.
 
 When a mergeable pair is found, the algorithm proceeds to merge it. This involves looking up the pair in the `mergers` dictionary to find its index and then replacing every occurrence of the pair in the tokens list with this index. This step is repeated until no more pairs can be merged, effectively simplifying the token list.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_3261.jpg" alt=" So we're going to look into the mergers dictionary for that pair to look up the index" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_3261.jpg" alt=" So we're going to look into the mergers dictionary for that pair to look up the index" width="450"/>
->>>>>>> master
+<img src="frames/frame_3261.jpg" alt=" So we're going to look into the mergers dictionary for that pair to look up the index" width="450"/>
 
 ### Handling Special Cases
 
@@ -380,11 +308,7 @@ In this section, we delve into the intricacies of tokenization, a fundamental pr
 
 Tokenization involves two primary processes: encoding and decoding. Encoding transforms a string of text into a sequence of tokens, while decoding attempts to revert tokens back to the original text. However, it's crucial to note that decoding doesn't always guarantee a perfect return to the original string due to the limitations in token sequences being valid UTF-8 byte streams.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_3349.jpg" alt=" Okay, and then second, I have a few test cases here for us as well" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_3349.jpg" alt=" Okay, and then second, I have a few test cases here for us as well" width="450"/>
->>>>>>> master
+<img src="frames/frame_3349.jpg" alt=" Okay, and then second, I have a few test cases here for us as well" width="450"/>
 
 ### Byte Pair Encoding: A Closer Look
 
@@ -400,11 +324,7 @@ As we transition from basic tokenization methods to those employed by leading-ed
 
 GPT-2 utilizes the byte-pair encoding algorithm, but with a twist. It applies a more sophisticated approach to avoid unnecessary merges, such as combining frequently occurring words with punctuation. This method aims to separate semantics from punctuation, enhancing the model's understanding of text.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4492.jpg" alt=" So let's kick things off by looking at the GPT series" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4492.jpg" alt=" So let's kick things off by looking at the GPT series" width="450"/>
->>>>>>> master
+<img src="frames/frame_4492.jpg" alt=" So let's kick things off by looking at the GPT series" width="450"/>
 
 #### Enforcing Merging Rules
 
@@ -429,11 +349,7 @@ Tokenization is a fundamental step in preparing text for processing by large lan
 
 Regex patterns play a crucial role in defining how text should be tokenized. They allow for the specification of rules that determine which parts of the text should not be merged, ensuring more precise tokenization.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_3691.jpg" alt=" "They create a regex pattern here that looks very complicated, and we're going to go through it in a bit."" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_3691.jpg" alt=" "They create a regex pattern here that looks very complicated, and we're going to go through it in a bit."" width="450"/>
->>>>>>> master
+<img src="frames/frame_3691.jpg" alt=" "They create a regex pattern here that looks very complicated, and we're going to go through it in a bit."" width="450"/>
 
 #### The Power of the `regex` Package
 
@@ -445,11 +361,7 @@ It's important to distinguish between the standard Python `re` module and the `r
 
 The regex pattern used in advanced tokenization can seem daunting at first glance. However, understanding its components reveals how it effectively separates text into tokens.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_3634.jpg" alt=" "So let's take a look at this pattern and what it's doing and why this is actually doing the separation that they are looking for."" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_3634.jpg" alt=" "So let's take a look at this pattern and what it's doing and why this is actually doing the separation that they are looking for."" width="450"/>
->>>>>>> master
+<img src="frames/frame_3634.jpg" alt=" "So let's take a look at this pattern and what it's doing and why this is actually doing the separation that they are looking for."" width="450"/>
 
 #### How the Pattern Works
 
@@ -461,11 +373,7 @@ The pattern is designed to match specific sequences in the text, using a combina
 
 To see the regex pattern in action, we apply it to an example string. This demonstrates how the pattern matches different parts of the text, effectively breaking it down into tokens.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_3658.jpg" alt=" "So what exactly is this doing? Well, re.findall will take this pattern and try to match it against this string."" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_3658.jpg" alt=" "So what exactly is this doing? Well, re.findall will take this pattern and try to match it against this string."" width="450"/>
->>>>>>> master
+<img src="frames/frame_3658.jpg" alt=" "So what exactly is this doing? Well, re.findall will take this pattern and try to match it against this string."" width="450"/>
 
 #### The Outcome of Tokenization
 
@@ -478,11 +386,7 @@ Advanced Tokenization Techniques
 
 Tokenization is not just about converting text into tokens; it's about intelligently splitting text to ensure that the model processes it in the most efficient and accurate way possible. This section delves into the sophisticated methods used to split text before it undergoes tokenization, highlighting the importance of this preliminary step.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4582.jpg" alt=" Now, what is this doing and why is this important?" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4582.jpg" alt=" Now, what is this doing and why is this important?" width="450"/>
->>>>>>> master
+<img src="frames/frame_4582.jpg" alt=" Now, what is this doing and why is this important?" width="450"/>
 
 ### Splitting Text for Better Tokenization
 
@@ -494,11 +398,7 @@ The process begins by dividing the text into a list of smaller text elements. Ea
 
 Regular expressions (regex) play a crucial role in segmenting text into manageable pieces. By applying specific regex patterns, the tokenizer can separate letters, numbers, and punctuation, preventing unwanted merges during the tokenization process. This technique is essential for maintaining the granularity of the tokenized text.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_3876.jpg" alt=" So basically using this regex pattern to chunk up the text is just one way of enforcing that some merges are not to happen" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_3876.jpg" alt=" So basically using this regex pattern to chunk up the text is just one way of enforcing that some merges are not to happen" width="450"/>
->>>>>>> master
+<img src="frames/frame_3876.jpg" alt=" So basically using this regex pattern to chunk up the text is just one way of enforcing that some merges are not to happen" width="450"/>
 
 #### Handling Numeric Characters
 
@@ -510,11 +410,7 @@ The tokenizer uses the `\p{n}` pattern to identify numeric characters across var
 
 Apostrophes present a unique challenge in tokenization. The tokenizer includes specific patterns to identify common apostrophes, separating them from adjacent letters. However, issues arise with Unicode apostrophes, which are not always correctly segmented, demonstrating the complexities of tokenization.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_3950.jpg" alt=" Let's see how these apostrophes work" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_3950.jpg" alt=" Let's see how these apostrophes work" width="450"/>
->>>>>>> master
+<img src="frames/frame_3950.jpg" alt=" Let's see how these apostrophes work" width="450"/>
 
 This advanced approach to tokenization, involving text splitting and the use of regex, underscores the intricate processes required to prepare text for large language models. By understanding these techniques, developers can better manage the challenges of tokenization, ensuring that their models process text as accurately as possible.
 
@@ -526,11 +422,7 @@ Tokenization Challenges and Solutions
 
 Tokenization in GPT models involves complex patterns and rules to effectively separate text into tokens. This process is crucial for the model's understanding and processing of text data. One notable challenge is handling apostrophes in different cases, which can lead to inconsistent tokenization.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_3950.jpg" alt=" And so it's basically hard-coded for this specific kind of apostrophe, and otherwise they become completely separate tokens." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_3950.jpg" alt=" And so it's basically hard-coded for this specific kind of apostrophe, and otherwise they become completely separate tokens." width="450"/>
->>>>>>> master
+<img src="frames/frame_3950.jpg" alt=" And so it's basically hard-coded for this specific kind of apostrophe, and otherwise they become completely separate tokens." width="450"/>
 
 GPT-2 Documentation Insights
 ----------------------------
@@ -544,96 +436,60 @@ Language-Specific Tokenization Issues
 
 Tokenization rules can also be language-specific, leading to inconsistencies when dealing with languages that use apostrophes differently. This highlights the challenge of creating a universally effective tokenizer across different languages.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4004.jpg" alt=" In addition to this, you can go to the GPT-2 docs, and here when they define the pattern, they say, should have added re.ignore case, so BP mergers can happen for capitalized versions of contractions." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4004.jpg" alt=" In addition to this, you can go to the GPT-2 docs, and here when they define the pattern, they say, should have added re.ignore case, so BP mergers can happen for capitalized versions of contractions." width="450"/>
->>>>>>> master
+<img src="frames/frame_4004.jpg" alt=" In addition to this, you can go to the GPT-2 docs, and here when they define the pattern, they say, should have added re.ignore case, so BP mergers can happen for capitalized versions of contractions." width="450"/>
 
 Regex Patterns in Tokenization
 ------------------------------
 
 The tokenizer uses regex patterns to match and separate punctuation, numbers, and letters. This method ensures that punctuation is correctly identified and separated, showcasing the tokenizer's ability to handle various text elements.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_3717.jpg" alt=" And what this is saying is, again, optional space followed by something that is not a letter, number, or a space, and one or more of that." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_3717.jpg" alt=" And what this is saying is, again, optional space followed by something that is not a letter, number, or a space, and one or more of that." width="450"/>
->>>>>>> master
+<img src="frames/frame_3717.jpg" alt=" And what this is saying is, again, optional space followed by something that is not a letter, number, or a space, and one or more of that." width="450"/>
 
 Handling Whitespace in Tokenization
 -----------------------------------
 
 GPT-2's tokenizer employs a unique approach to whitespace, using negative lookahead assertions in regex to manage spaces efficiently. This technique ensures that common tokens with spaces are consistently tokenized, maintaining the model's performance.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4108.jpg" alt=" And finally, this is also a little bit confusing. So this is matching whitespace, but this is using a negative lookahead assertion in regex." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4108.jpg" alt=" And finally, this is also a little bit confusing. So this is matching whitespace, but this is using a negative lookahead assertion in regex." width="450"/>
->>>>>>> master
+<img src="frames/frame_4108.jpg" alt=" And finally, this is also a little bit confusing. So this is matching whitespace, but this is using a negative lookahead assertion in regex." width="450"/>
 
 Real-World Tokenization Example
 -------------------------------
 
 A practical example of tokenization in action is demonstrated with a piece of Python code. The tokenizer's ability to split text into distinct elements, without merging spaces, showcases its effectiveness in handling complex text structures.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4194.jpg" alt=" I wanted to show one more real world example here. So if we have this string, which is a piece of Python code, and then we try to split it up, then this is the kind of output we get." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4194.jpg" alt=" I wanted to show one more real world example here. So if we have this string, which is a piece of Python code, and then we try to split it up, then this is the kind of output we get." width="450"/>
->>>>>>> master
+<img src="frames/frame_4194.jpg" alt=" I wanted to show one more real world example here. So if we have this string, which is a piece of Python code, and then we try to split it up, then this is the kind of output we get." width="450"/>
 
 Understanding OpenAI's Tokenization Approach
 --------------------------------------------
 
 OpenAI's methodology for training the GPT-2 tokenizer remains partially undisclosed, with only the inference code released. This leaves some aspects of the tokenizer's training process a mystery, highlighting the complexity of developing effective tokenization strategies.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4266.jpg" alt=" Now, the training code for the GPT-2 tokenizer was never released, so all we have is the code that I've already shown you, but this code here that they've released is only the inference code for the tokens." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4266.jpg" alt=" Now, the training code for the GPT-2 tokenizer was never released, so all we have is the code that I've already shown you, but this code here that they've released is only the inference code for the tokens." width="450"/>
->>>>>>> master
+<img src="frames/frame_4266.jpg" alt=" Now, the training code for the GPT-2 tokenizer was never released, so all we have is the code that I've already shown you, but this code here that they've released is only the inference code for the tokens." width="450"/>
 
 Introducing the TickToken Library
 ---------------------------------
 
 The TickToken library is OpenAI's official tool for tokenization inference. It simplifies the process of tokenizing text for GPT models, including the latest GPT-4, which introduces changes in whitespace handling and regex patterns for improved tokenization.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5324.jpg" alt=" Next, I wanted to introduce you to the TickToken library from OpenAI, which is the official library for tokenization from OpenAI." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5324.jpg" alt=" Next, I wanted to introduce you to the TickToken library from OpenAI, which is the official library for tokenization from OpenAI." width="450"/>
->>>>>>> master
+<img src="frames/frame_5324.jpg" alt=" Next, I wanted to introduce you to the TickToken library from OpenAI, which is the official library for tokenization from OpenAI." width="450"/>
 
 GPT-4 Tokenizer Enhancements
 ----------------------------
 
 GPT-4 introduces significant changes in its tokenizer, including a revised regex pattern and the handling of special tokens. These modifications aim to enhance the model's ability to process and understand text more effectively.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4397.jpg" alt=" And then if you scroll down to CL100K, this is the GPT-4 tokenizer, you see that the pattern has changed." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4397.jpg" alt=" And then if you scroll down to CL100K, this is the GPT-4 tokenizer, you see that the pattern has changed." width="450"/>
->>>>>>> master
+<img src="frames/frame_4397.jpg" alt=" And then if you scroll down to CL100K, this is the GPT-4 tokenizer, you see that the pattern has changed." width="450"/>
 
 ## Enhancements in GPT-4 Tokenization
 ### Case Sensitivity and Apostrophe Handling
 GPT-4 introduces several changes to improve tokenization, including case-insensitive matching for contractions such as 's, 'd, 'm, etc., ensuring both lowercase and uppercase versions are recognized equally.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4015.jpg" alt=" And so the comment that we saw earlier on, oh, we should have used re.uppercase, basically we're now going to be matching these, apostrophe s, apostrophe d, apostrophe m, etc." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4015.jpg" alt=" And so the comment that we saw earlier on, oh, we should have used re.uppercase, basically we're now going to be matching these, apostrophe s, apostrophe d, apostrophe m, etc." width="450"/>
->>>>>>> master
+<img src="frames/frame_4015.jpg" alt=" And so the comment that we saw earlier on, oh, we should have used re.uppercase, basically we're now going to be matching these, apostrophe s, apostrophe d, apostrophe m, etc." width="450"/>
 
 ### Number Tokenization Limitations
 Another notable adjustment is the limitation on number tokenization, where sequences of more than three digits are not merged, aiming to prevent excessively long number sequences in tokens.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_6957.jpg" alt=" And then one more thing here is you will notice that when they match the numbers, they only match one to three numbers." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_6957.jpg" alt=" And then one more thing here is you will notice that when they match the numbers, they only match one to three numbers." width="450"/>
->>>>>>> master
+<img src="frames/frame_6957.jpg" alt=" And then one more thing here is you will notice that when they match the numbers, they only match one to three numbers." width="450"/>
 
 ### Vocabulary Size Expansion
 The vocabulary size has significantly increased from approximately 50k to around 100k, enhancing the model's ability to understand and generate a wider array of text.
@@ -647,30 +503,18 @@ The `encoder.json` and `vocab.bpe` files are crucial for the tokenizer's functio
 ### The Byte Encoder and Decoder
 OpenAI's implementation includes a byte encoder and decoder, which, despite being an additional layer to the tokenizer, are not extensively covered due to their straightforward nature.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4612.jpg" alt=" And this is actually unfortunately just kind of a spurious implementation detail." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4612.jpg" alt=" And this is actually unfortunately just kind of a spurious implementation detail." width="450"/>
->>>>>>> master
+<img src="frames/frame_4612.jpg" alt=" And this is actually unfortunately just kind of a spurious implementation detail." width="450"/>
 
 ### The Core of BPE Tokenization
 The BPE (Byte Pair Encoding) function is the heart of the tokenizer, identifying and merging bigrams in a loop until no further merges are possible, mirroring the process we've previously discussed.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4640.jpg" alt=" And you should recognize this loop here, which is very similar to our own while loop," width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4640.jpg" alt=" And you should recognize this loop here, which is very similar to our own while loop," width="450"/>
->>>>>>> master
+<img src="frames/frame_4640.jpg" alt=" And you should recognize this loop here, which is very similar to our own while loop," width="450"/>
 
 ## Special Tokens in Tokenization
 ### The Role of Special Tokens
 Special tokens, such as the end-of-text token, are used to delimit documents or sections within the data, aiding the model in understanding when one segment ends and another begins.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4796.jpg" alt=" So when we're creating the training data, we have all these documents, and we tokenize them and get a stream of tokens." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4796.jpg" alt=" So when we're creating the training data, we have all these documents, and we tokenize them and get a stream of tokens." width="450"/>
->>>>>>> master
+<img src="frames/frame_4796.jpg" alt=" So when we're creating the training data, we have all these documents, and we tokenize them and get a stream of tokens." width="450"/>
 
 ### Implementing Special Tokens
 The implementation of special tokens varies, with some being handled outside the typical BPE algorithm, allowing for the addition of arbitrary tokens to the tokenizer's vocabulary.
@@ -680,11 +524,7 @@ The implementation of special tokens varies, with some being handled outside the
 ### Extending Tokenizers with Special Tokens
 The ability to extend tokenizers with new special tokens is highlighted, showcasing the flexibility in customizing tokenization for specific needs or applications.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5014.jpg" alt=" Now we can also go back to this file, which we looked at previously." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5014.jpg" alt=" Now we can also go back to this file, which we looked at previously." width="450"/>
->>>>>>> master
+<img src="frames/frame_5014.jpg" alt=" Now we can also go back to this file, which we looked at previously." width="450"/>
 
 ### GPT-4's Additional Special Tokens
 GPT-4 introduces new special tokens, including FIM (fill in the middle) tokens, to facilitate more complex tokenization strategies, reflecting advancements in tokenizer design.
@@ -701,11 +541,7 @@ Incorporating special tokens into a language model requires careful adjustments,
 
 This operation is common in model fine-tuning and is crucial for those looking to customize their models for specific applications.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5067.jpg" alt=" And then there's one additional SERP token here. So that's that encoding as well." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5067.jpg" alt=" And then there's one additional SERP token here. So that's that encoding as well." width="450"/>
->>>>>>> master
+<img src="frames/frame_5067.jpg" alt=" And then there's one additional SERP token here. So that's that encoding as well." width="450"/>
 
 Building Your Own GPT-4 Tokenizer
 ---------------------------------
@@ -729,11 +565,7 @@ Training your tokenizer involves understanding how tokens are merged and visuali
 
 This aspect of tokenizer development is crucial for those aiming to tailor their models to specific datasets or applications.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5224.jpg" alt=" So here's some of the code inside MinBPE, shows the token vocabularies that you might obtain." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5224.jpg" alt=" So here's some of the code inside MinBPE, shows the token vocabularies that you might obtain." width="450"/>
->>>>>>> master
+<img src="frames/frame_5224.jpg" alt=" So here's some of the code inside MinBPE, shows the token vocabularies that you might obtain." width="450"/>
 
 Exploring Advanced Tokenization Techniques
 ------------------------------------------
@@ -744,11 +576,7 @@ In the realm of large language models (LLMs), understanding the nuances of token
 
 Tokenization plays a pivotal role in how LLMs interpret and process text. A fascinating observation is the way GPT-4 and custom models handle tokenization differently, primarily due to the variance in their training datasets.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_4340.jpg" alt=" And so as an example, here GPT-4 merged IN to become IN" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_4340.jpg" alt=" And so as an example, here GPT-4 merged IN to become IN" width="450"/>
->>>>>>> master
+<img src="frames/frame_4340.jpg" alt=" And so as an example, here GPT-4 merged IN to become IN" width="450"/>
 
 For instance, GPT-4's tokenizer might merge certain tokens differently compared to a tokenizer trained on a distinct dataset, like Wikipedia pages. This difference underscores the impact of the training set's nature on the tokenizer's behavior.
 
@@ -764,11 +592,7 @@ Moving beyond the traditional tokenization approach, we encounter SentencePiece,
 
 - **Unique Approach to Tokenization**: Unlike TICToken, which operates on bytes post UTF-8 encoding, SentencePiece directly manipulates the code points in the string. This fundamental difference in approach allows SentencePiece to offer a unique perspective on tokenization.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5377.jpg" alt=" So in the case of TICToken, we first take our code points in the string, we encode them using UTF-8 to bytes, and then we're merging bytes" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5377.jpg" alt=" So in the case of TICToken, we first take our code points in the string, we encode them using UTF-8 to bytes, and then we're merging bytes" width="450"/>
->>>>>>> master
+<img src="frames/frame_5377.jpg" alt=" So in the case of TICToken, we first take our code points in the string, we encode them using UTF-8 to bytes, and then we're merging bytes" width="450"/>
 
 ### The Subtleties of SentencePiece's Methodology
 
@@ -784,11 +608,7 @@ This nuanced approach to tokenization, focusing on code points and their rarity,
 
 The comparison between TICToken and SentencePiece reveals a significant, albeit subtle, difference in their tokenization philosophies. While TICToken's method is perceived as cleaner due to its straightforward byte merging, SentencePiece offers a more intricate strategy by directly dealing with code points and providing fallback mechanisms for rare instances.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5449.jpg" alt=" Personally, I find the TICToken way significantly cleaner, but it's kind of like a subtle but pretty major difference between the way they approach tokenization" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5449.jpg" alt=" Personally, I find the TICToken way significantly cleaner, but it's kind of like a subtle but pretty major difference between the way they approach tokenization" width="450"/>
->>>>>>> master
+<img src="frames/frame_5449.jpg" alt=" Personally, I find the TICToken way significantly cleaner, but it's kind of like a subtle but pretty major difference between the way they approach tokenization" width="450"/>
 
 Understanding these advanced tokenization techniques is essential for anyone looking to delve deeper into the workings of LLMs and optimize their models for better performance and efficiency.
 
@@ -797,11 +617,7 @@ Exploring SentencePiece for Tokenization
 
 In our journey to understand tokenization in large language models, we delve into the use of SentencePiece, a robust tool designed to handle the complexities of tokenization with a wide array of configurations. SentencePiece stands out due to its flexibility and ability to manage diverse linguistic data, making it a valuable asset in the tokenization process.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5460.jpg" alt=" This is how we can import SentencePiece" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5460.jpg" alt=" This is how we can import SentencePiece" width="450"/>
->>>>>>> master
+<img src="frames/frame_5460.jpg" alt=" This is how we can import SentencePiece" width="450"/>
 
 Creating a Toy Dataset for SentencePiece
 ----------------------------------------
@@ -815,11 +631,7 @@ Understanding SentencePiece's Configuration Complexity
 
 SentencePiece's vast range of options and configurations can be overwhelming, attributed to its long history and aim to accommodate a broad spectrum of use cases. While many options may seem irrelevant for specific tasks, understanding these configurations is key to leveraging SentencePiece effectively.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5481.jpg" alt=" And the reason this is so is because SentencePiece has been around, I think, for a while" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5481.jpg" alt=" And the reason this is so is because SentencePiece has been around, I think, for a while" width="450"/>
->>>>>>> master
+<img src="frames/frame_5481.jpg" alt=" And the reason this is so is because SentencePiece has been around, I think, for a while" width="450"/>
 
 Configuring SentencePiece for LLM Tokenization
 -----------------------------------------------
@@ -833,11 +645,7 @@ The Role of Normalization in Tokenization
 
 Normalization plays a significant role in traditional natural language processing tasks, such as machine translation and text classification. However, in the context of language models, the preference often leans towards minimal interference with the raw data, aiming to preserve its original form as much as possible.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5589.jpg" alt=" Normalization used to be very prevalent, I would say, before LLMs in natural language processing" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5589.jpg" alt=" Normalization used to be very prevalent, I would say, before LLMs in natural language processing" width="450"/>
->>>>>>> master
+<img src="frames/frame_5589.jpg" alt=" Normalization used to be very prevalent, I would say, before LLMs in natural language processing" width="450"/>
 
 SentencePiece and the Concept of Sentences
 ------------------------------------------
@@ -851,11 +659,7 @@ Exploring Advanced Tokenization Techniques
 
 Tokenization is not just about splitting text into manageable pieces; it involves intricate rules and considerations, especially when dealing with large language models. This section delves into the complexities of tokenization, highlighting the challenges of handling rare word characters, digits, whitespace, and the implementation of merge rules.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_1082.jpg" alt=" It has a lot of treatment around rare word characters, and when I say word, I mean code points" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_1082.jpg" alt=" It has a lot of treatment around rare word characters, and when I say word, I mean code points" width="450"/>
->>>>>>> master
+<img src="frames/frame_1082.jpg" alt=" It has a lot of treatment around rare word characters, and when I say word, I mean code points" width="450"/>
 
 Understanding Special Tokens and Vocabulary Creation
 ----------------------------------------------------
@@ -869,11 +673,7 @@ Byte Tokens and Merge Tokens: A Closer Look
 
 Byte tokens are a fallback mechanism in tokenization, ensuring that every possible byte (character) is represented in the vocabulary. This section explains the significance of byte tokens and how they are incorporated into the vocabulary, followed by an exploration of merge tokens, which represent parent nodes in the tokenization process.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5779.jpg" alt=" So here we saw that BYTE fallback in Llama was turned on, so it's true" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5779.jpg" alt=" So here we saw that BYTE fallback in Llama was turned on, so it's true" width="450"/>
->>>>>>> master
+<img src="frames/frame_5779.jpg" alt=" So here we saw that BYTE fallback in Llama was turned on, so it's true" width="450"/>
 
 Decoding and Understanding the Vocabulary Structure
 ---------------------------------------------------
@@ -887,22 +687,14 @@ Encoding and Decoding Tokens: Practical Applications
 
 Once a vocabulary is established, encoding text into token IDs and decoding them back into text are crucial capabilities of tokenization systems. This part of the guide provides insights into how SentenceBees performs encoding and decoding, illustrating the practical applications of these processes in working with large language models.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5864.jpg" alt=" Once we have a vocabulary, we can encode into IDs, and we can sort of get a list" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5864.jpg" alt=" Once we have a vocabulary, we can encode into IDs, and we can sort of get a list" width="450"/>
->>>>>>> master
+<img src="frames/frame_5864.jpg" alt=" Once we have a vocabulary, we can encode into IDs, and we can sort of get a list" width="450"/>
 
 Exploring Token IDs and Unknown Tokens
 --------------------------------------
 
 In our journey through tokenization, we encounter a fascinating aspect when dealing with characters outside the training set, such as Korean characters in this example. These characters are not recognized by the model, leading to the use of unknown tokens (UNK) for representation. However, with byte fallback enabled, the model cleverly resorts to UTF-8 encoding to represent these unfamiliar bytes.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5883.jpg" alt=" So let's take a look at what happened here. Hello, space, annyeonghaseyo. So these are the token IDs we got back." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5883.jpg" alt=" So let's take a look at what happened here. Hello, space, annyeonghaseyo. So these are the token IDs we got back." width="450"/>
->>>>>>> master
+<img src="frames/frame_5883.jpg" alt=" So let's take a look at what happened here. Hello, space, annyeonghaseyo. So these are the token IDs we got back." width="450"/>
 
 Understanding Byte Fallback Mechanism
 -------------------------------------
@@ -916,11 +708,7 @@ The Impact of Disabling Byte Fallback
 
 Disabling byte fallback leads to a significant change in how the model processes text. Without byte fallback, unknown characters are simply marked as UNK, significantly reducing the model's ability to represent and understand the input. This example highlights the importance of byte fallback in maintaining a rich and nuanced representation of text data.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_5954.jpg" alt=" So the first thing that happened is all the byte tokens disappeared, right?" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_5954.jpg" alt=" So the first thing that happened is all the byte tokens disappeared, right?" width="450"/>
->>>>>>> master
+<img src="frames/frame_5954.jpg" alt=" So the first thing that happened is all the byte tokens disappeared, right?" width="450"/>
 
 Decoding Tokens and Visual Representation
 -----------------------------------------
@@ -938,11 +726,7 @@ Tokenization is a pivotal step in preparing text for processing by large languag
 
 One peculiar aspect of SentencePiece's tokenization process is the addition of an extra space at the beginning of tokens. This is controlled by the `Add dummy prefix` option, which is set to true by default.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_6033.jpg" alt=" Why do we have an extra space in the front of hello? Where is this coming from?" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_6033.jpg" alt=" Why do we have an extra space in the front of hello? Where is this coming from?" width="450"/>
->>>>>>> master
+<img src="frames/frame_6033.jpg" alt=" Why do we have an extra space in the front of hello? Where is this coming from?" width="450"/>
 
 The rationale behind this is to standardize the treatment of words at the beginning of sentences and within sentences. By adding a dummy space, SentencePiece aims to make tokens like "world" and " world" identical in the eyes of the LLM, facilitating its learning process.
 
@@ -952,11 +736,7 @@ The rationale behind this is to standardize the treatment of words at the beginn
 
 SentencePiece employs several preprocessing options to enhance the tokenization process. One notable feature is its use of a dummy prefix to unify the representation of words, regardless of their position in a sentence. This preprocessing step is crucial for models like Lama 2, which also utilize this option for consistent tokenization.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_6128.jpg" alt=" And that's, I think, everything that I want to say from my preview of sentence piece and how it is different" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_6128.jpg" alt=" And that's, I think, everything that I want to say from my preview of sentence piece and how it is different" width="450"/>
->>>>>>> master
+<img src="frames/frame_6128.jpg" alt=" And that's, I think, everything that I want to say from my preview of sentence piece and how it is different" width="450"/>
 
 ### The Intricacies of SentencePiece Configuration
 
@@ -968,11 +748,7 @@ The configuration of SentencePiece is intricate, with various settings that infl
 
 In summary, SentencePiece is a widely used tool in the industry for its efficiency in both training and inference phases of tokenization. However, it comes with its share of complexities and "foot guns," such as the handling of sentence lengths and the necessity of an UNCTOKEN. Additionally, its documentation leaves much to be desired, posing challenges for users seeking to fully leverage its capabilities.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_6155.jpg" alt=" And yeah, I think that's it for this section" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_6155.jpg" alt=" And yeah, I think that's it for this section" width="450"/>
->>>>>>> master
+<img src="frames/frame_6155.jpg" alt=" And yeah, I think that's it for this section" width="450"/>
 
 This exploration of SentencePiece's tokenization process sheds light on the nuanced considerations necessary for effective text processing in LLMs. Despite its quirks, SentencePiece remains a valuable tool for developers and researchers working with language models.
 
@@ -987,11 +763,7 @@ Tokenization is a fundamental process in the operation of large language models 
 
 A well-designed tokenizer is crucial for the effective training and operation of LLMs. The choice of tokenizer and the decisions made during its design can have profound implications on the model's ability to understand and generate text.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_6195.jpg" alt=" so it took me a lot of time working with this myself and just visualizing things and trying to really understand what is happening here because the documentation unfortunately is, in my opinion, not super amazing" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_6195.jpg" alt=" so it took me a lot of time working with this myself and just visualizing things and trying to really understand what is happening here because the documentation unfortunately is, in my opinion, not super amazing" width="450"/>
->>>>>>> master
+<img src="frames/frame_6195.jpg" alt=" so it took me a lot of time working with this myself and just visualizing things and trying to really understand what is happening here because the documentation unfortunately is, in my opinion, not super amazing" width="450"/>
 
 ### Vocab Size Considerations in Model Architecture
 
@@ -1030,11 +802,7 @@ Exploring Character-Level Tasks with GPT-4
 
 In our journey to understand the intricacies of large language models (LLMs), we encounter various tasks that highlight the importance and challenges of tokenization. A fascinating example involves asking GPT-4 to reverse a string, `.defaultstyle`. Initially, GPT-4 attempts to use a code interpreter, but upon simplification of the task—breaking it down into smaller, more manageable steps—the model successfully reverses the string.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_6788.jpg" alt=" So for example, here I asked GPT-4 to reverse the string .defaultstyle, and it tried to use a code interpreter" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_6788.jpg" alt=" So for example, here I asked GPT-4 to reverse the string .defaultstyle, and it tried to use a code interpreter" width="450"/>
->>>>>>> master
+<img src="frames/frame_6788.jpg" alt=" So for example, here I asked GPT-4 to reverse the string .defaultstyle, and it tried to use a code interpreter" width="450"/>
 
 This experiment underscores the hypothesis that tokenization plays a crucial role in how LLMs process and understand tasks, especially when dealing with character-level data.
 
@@ -1047,11 +815,7 @@ LLMs often exhibit reduced performance in non-English languages, a phenomenon pa
 
 For instance, the English greeting "hello, how are you" translates into significantly more tokens in another language, illustrating the tokenizer's inefficiency and the resultant data bloat in non-English languages.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_6867.jpg" alt=" And I briefly covered this already, but basically it's not only that the language model sees less non-English data during training" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_6867.jpg" alt=" And I briefly covered this already, but basically it's not only that the language model sees less non-English data during training" width="450"/>
->>>>>>> master
+<img src="frames/frame_6867.jpg" alt=" And I briefly covered this already, but basically it's not only that the language model sees less non-English data during training" width="450"/>
 
 This inefficiency not only affects the model's performance but also its ability to process and understand non-English languages effectively.
 
@@ -1060,11 +824,7 @@ Tokenization and Arithmetic in LLMs
 
 One of the intriguing aspects of LLMs is their handling of arithmetic operations, which is directly influenced by the tokenization of numbers. The process is far from straightforward, with numbers being tokenized in an arbitrary manner, affecting the model's ability to perform simple arithmetic accurately.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_6948.jpg" alt=" That has to do with the tokenization of numbers" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_6948.jpg" alt=" That has to do with the tokenization of numbers" width="450"/>
->>>>>>> master
+<img src="frames/frame_6948.jpg" alt=" That has to do with the tokenization of numbers" width="450"/>
 
 A detailed exploration of integer tokenization reveals the randomness in how numbers are broken down into tokens, posing a significant challenge for LLMs in arithmetic tasks.
 
@@ -1075,11 +835,7 @@ Improving Python Code Understanding in GPT Models
 
 The tokenization process also impacts the model's efficiency in understanding and processing Python code. GPT-2, for instance, struggled with encoding spaces in Python code, treating each space as an individual token and severely limiting the model's context length.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_7021.jpg" alt=" the encoding efficiency of the tokenizer for handling spaces in Python is terrible" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_7021.jpg" alt=" the encoding efficiency of the tokenizer for handling spaces in Python is terrible" width="450"/>
->>>>>>> master
+<img src="frames/frame_7021.jpg" alt=" the encoding efficiency of the tokenizer for handling spaces in Python is terrible" width="450"/>
 
 This issue, identified as a tokenization bug, was addressed in GPT-4, highlighting the continuous efforts to enhance LLMs' understanding and processing capabilities across different languages and data types.
 
@@ -1093,11 +849,7 @@ Exploring Special Tokens and Trailing Whitespace in LLMs
 
 Large Language Models (LLMs) like GPT-4 exhibit peculiar behaviors when encountering special tokens within user inputs. An intriguing example is the model's response to the string "end of text." Despite explicit instructions to print this string, GPT-4 hesitates, questioning the specificity of the request. This incident highlights a potential parsing issue, where "end of text" might be recognized as a special token rather than a sequence of individual characters. Such anomalies suggest that the handling of special tokens by LLMs could serve as an attack surface, offering a method to confuse or manipulate model outputs.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_7564.jpg" alt=" My LLM abruptly halts when it sees the string end of text" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_7564.jpg" alt=" My LLM abruptly halts when it sees the string end of text" width="450"/>
->>>>>>> master
+<img src="frames/frame_7564.jpg" alt=" My LLM abruptly halts when it sees the string end of text" width="450"/>
 
 [Jump to this part of the video: 01:57:30](https://www.youtube.com/watch?v=zduSFxRajkE&t=7050s)
 
@@ -1106,11 +858,7 @@ Large Language Models (LLMs) like GPT-4 exhibit peculiar behaviors when encounte
 
 The behavior of LLMs is also significantly influenced by the presence of trailing whitespace in inputs. This is exemplified by an experiment using GPT 3.5 Turbo Instruct, where adding a space after a tagline prompt resulted in a warning about potential performance degradation. The warning sheds light on how LLMs tokenize inputs, revealing that trailing spaces are tokenized separately, potentially disrupting the expected token sequence. This scenario underscores the importance of understanding tokenization nuances, as even seemingly minor details like trailing whitespace can lead to out-of-distribution issues, affecting model predictions and performance.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_7135.jpg" alt=" So if you come to Playground, and we come here to GPT 3.5 Turbo Instruct" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_7135.jpg" alt=" So if you come to Playground, and we come here to GPT 3.5 Turbo Instruct" width="450"/>
->>>>>>> master
+<img src="frames/frame_7135.jpg" alt=" So if you come to Playground, and we come here to GPT 3.5 Turbo Instruct" width="450"/>
 
 [Jump to this part of the video: 01:59:33](https://www.youtube.com/watch?v=zduSFxRajkE&t=7173s)
 
@@ -1119,11 +867,7 @@ The behavior of LLMs is also significantly influenced by the presence of trailin
 
 The foundational concept of tokenization in LLMs extends beyond simple character or word recognition. Tokens represent chunks of text that the model perceives as its basic units of understanding. However, the tokenization process can introduce peculiarities, such as the unexpected handling of sequences like "default cell style" or the misinterpretation of special characters and whitespace. These examples highlight the complexity of tokenization and its critical role in shaping LLM behavior, emphasizing the need for careful consideration of input formatting to ensure optimal model performance.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_7304.jpg" alt=" Let's go back to our default cell style" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_7304.jpg" alt=" Let's go back to our default cell style" width="450"/>
->>>>>>> master
+<img src="frames/frame_7304.jpg" alt=" Let's go back to our default cell style" width="450"/>
 
 [Jump to this part of the video: 02:01:50](https://www.youtube.com/watch?v=zduSFxRajkE&t=7310s)
 
@@ -1132,11 +876,7 @@ Exploring Unstable Tokens in Language Models
 
 Language models can sometimes exhibit unexpected and erratic behaviors when encountering certain inputs. This phenomenon is often due to what are termed "unstable tokens," which can lead to a range of issues from the model predicting end-of-text prematurely to flagging inputs as policy violations.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_7373.jpg" alt=" This is giving it brain damage. It's never seen this before. It's shocked, and it's predicting end of text or something." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_7373.jpg" alt=" This is giving it brain damage. It's never seen this before. It's shocked, and it's predicting end of text or something." width="450"/>
->>>>>>> master
+<img src="frames/frame_7373.jpg" alt=" This is giving it brain damage. It's never seen this before. It's shocked, and it's predicting end of text or something." width="450"/>
 
 ### The Challenge of Partial Tokens
 
@@ -1165,11 +905,7 @@ Among the most intriguing examples of unstable tokens is the "solid gold Magikar
 
 A detailed analysis of token embeddings revealed clusters of seemingly unrelated and peculiar tokens, including the infamous solid gold Magikarp. This discovery raises questions about the origins of these tokens and their impact on model behavior.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_332.jpg" alt=" My favorite one by far is this solid gold Magikarp." width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_332.jpg" alt=" My favorite one by far is this solid gold Magikarp." width="450"/>
->>>>>>> master
+<img src="frames/frame_332.jpg" alt=" My favorite one by far is this solid gold Magikarp." width="450"/>
 
 ### Trigger Words and Model Behavior
 
@@ -1189,11 +925,7 @@ Exploring the Quirks of Tokenization in Language Models
 Tokenization plays a pivotal role in the functionality of large language models (LLMs), often leading to unexpected behaviors due to the nuances in its implementation. This section delves into a specific instance highlighting the importance of understanding tokenization's impact on LLMs.
 
 ### The Case of the "sold gold Magikarp"
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_1065.jpg" alt=" Well this again comes down to tokenization" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_1065.jpg" alt=" Well this again comes down to tokenization" width="450"/>
->>>>>>> master
+<img src="frames/frame_1065.jpg" alt=" Well this again comes down to tokenization" width="450"/>
 
 A curious case emerged involving a Reddit user known as "sold gold Magikarp." This example illustrates how discrepancies between the tokenization dataset and the training dataset can lead to unforeseen model behavior. The tokenization process identified "sold gold Magikarp" as a frequently occurring string, assigning it a unique token within the model's vocabulary. However, this token was absent from the training data used to refine the model, resulting in an "untrained" token that, when invoked, could lead to unpredictable outcomes.
 
@@ -1202,11 +934,7 @@ A curious case emerged involving a Reddit user known as "sold gold Magikarp." Th
 ### Untrained Tokens and Undefined Behavior
 The phenomenon of untrained tokens, akin to unallocated memory in programming, underscores the challenges in managing LLMs' vocabularies. When such tokens are activated, they extract an untrained row from the embedding table, introducing undefined behavior into the model's output. This scenario emphasizes the critical nature of aligning tokenization and training datasets to ensure model reliability.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_7733.jpg" alt=" And then at test time, if you evoke this token, then you're basically plucking out a row of the embedding table that is completely untrained" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_7733.jpg" alt=" And then at test time, if you evoke this token, then you're basically plucking out a row of the embedding table that is completely untrained" width="450"/>
->>>>>>> master
+<img src="frames/frame_7733.jpg" alt=" And then at test time, if you evoke this token, then you're basically plucking out a row of the embedding table that is completely untrained" width="450"/>
 
 ### Tokenization Efficiency Across Formats
 The efficiency of tokenization can vary significantly across different data formats, impacting the model's performance and cost-effectiveness. A comparison between JSON and YAML demonstrates this variability, with YAML proving to be more token-efficient. This insight is valuable for optimizing the processing of structured data, encouraging the selection of formats that minimize token usage and, by extension, computational resources.
@@ -1216,11 +944,7 @@ The efficiency of tokenization can vary significantly across different data form
 ### Concluding Thoughts on Tokenization
 Despite its complexities and potential pitfalls, tokenization remains a crucial stage in the development and operation of LLMs. The challenges it presents, from security issues to AI safety concerns, highlight the importance of thorough understanding and careful management of this process. The pursuit of more efficient and effective tokenization methods continues, with the potential to significantly enhance the performance and applicability of LLMs in various domains.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_7825.jpg" alt=" Okay, so that concludes my fairly long video on tokenization" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_7825.jpg" alt=" Okay, so that concludes my fairly long video on tokenization" width="450"/>
->>>>>>> master
+<img src="frames/frame_7825.jpg" alt=" Okay, so that concludes my fairly long video on tokenization" width="450"/>
 
 ### Recommendations for Tokenization Practices
 For those working with LLMs, leveraging existing tokens and vocabularies, such as those from GPT-4, can offer efficiency benefits. Tools like TIC token provide valuable resources for inference, while custom vocabulary training may benefit from sentence piece BP, depending on specific project requirements.
@@ -1234,19 +958,11 @@ In the realm of tokenization for large language models, SentencePiece is a tool 
 
 - **Byte Fallback and Unicode Code Points**: One of the primary concerns with SentencePiece is its reliance on byte fallback and the handling of Unicode code points during the Byte Pair Encoding (BPE) process. This approach can introduce complications, especially when dealing with a diverse set of characters and symbols.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_7890.jpg" alt=" As I mentioned, I'm not a huge fan of sentence piece. I don't like its byte fallback" width="450"/>
+<img src="frames/frame_7890.jpg" alt=" As I mentioned, I'm not a huge fan of sentence piece. I don't like its byte fallback" width="450"/>
 
 - **Complexity and Configuration**: SentencePiece is known for its myriad of settings, which can be both a blessing and a curse. The flexibility allows for fine-tuning, but it also introduces the risk of misconfiguration, leading to potential issues such as inadvertently cropping sentences due to misunderstood parameters.
 
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_7834.jpg" alt=" And I think there's a lot of foot guns here" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_7890.jpg" alt=" As I mentioned, I'm not a huge fan of sentence piece. I don't like its byte fallback" width="450"/>
-
-- **Complexity and Configuration**: SentencePiece is known for its myriad of settings, which can be both a blessing and a curse. The flexibility allows for fine-tuning, but it also introduces the risk of misconfiguration, leading to potential issues such as inadvertently cropping sentences due to misunderstood parameters.
-
-<img src="/home/jovyan/work/users/pshalini/frames/frame_7834.jpg" alt=" And I think there's a lot of foot guns here" width="450"/>
->>>>>>> master
+<img src="frames/frame_7834.jpg" alt=" And I think there's a lot of foot guns here" width="450"/>
 
 - **Recommendations for Use**: For those who decide to use SentencePiece, it's advised to proceed with caution regarding its settings. One strategy is to replicate the configurations used by established projects, such as those by Meta, to minimize the risk of errors. Additionally, spending time to thoroughly understand the available hyperparameters and their implications is crucial for successful implementation.
 
@@ -1259,11 +975,7 @@ While SentencePiece has its place in the toolkit of tokenization methods, the se
 
 - **The Ideal of TIC Token with Training Code**: The ultimate goal in tokenization is to achieve a method that combines the granularity of token-based approaches with the adaptability of code training. This combination would offer the best of both worlds, providing a robust solution for tokenization challenges.
 
-<<<<<<< HEAD
-<img src="/home/jovyan/work/users/pshalini/video_toBlog_transcriptor/frames/frame_7949.jpg" alt=" And that is the ideal thing that currently does not exist" width="450"/>
-=======
-<img src="/home/jovyan/work/users/pshalini/frames/frame_7949.jpg" alt=" And that is the ideal thing that currently does not exist" width="450"/>
->>>>>>> master
+<img src="frames/frame_7949.jpg" alt=" And that is the ideal thing that currently does not exist" width="450"/>
 
 - **Current State of minBPE**: As of now, minBPE represents a step towards this ideal, though it is still in the development phase and primarily implemented in Python. The anticipation for minBPE to reach its full potential is high, as it promises to bring significant improvements to the process of tokenization.
 
